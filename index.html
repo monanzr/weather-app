@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assests/img/WeCare.ico" type="image/x-icon">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css    ">
+</head>
+<body>
+
+    <section class="main">
+        <div class="container">
+            <div class="searchIcon">
+                <button type="button" class="btn btn__primary searchIcon__btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+               </button>
+            </div>
+            <div class="theme">
+                <a class="theme__link theme__day" href="#">
+                    <i class="fa-solid fa-sun"></i>
+                </a>
+                <a class="theme__link active theme__night" href="#">
+                    <i class="fa-solid fa-moon"></i>
+                </a>
+            </div>
+        <div class="loaction">
+            <i class="fa-solid fa-location-pin"></i>
+            <p class="loaction__name">Tehran</p>
+        </div>
+        <div class="date">Oct 4 2021</div>
+        <div class="weatherIcon">
+            <img src="img/10d.png" class="icon">
+        </div>
+        <div class="temperature">
+            <p class="temperature__value">32</p>
+            <p class="temperature__scale">°</p>
+        </div>
+        <div class="cloudiness">
+            <img src="img/cloud.svg" alt="cloudiness">
+            <p>Cloudiness</p>
+            <span class="cloudiness__value">0</span>%
+        </div>
+        <div class="wind">
+            <img src="img/wind.svg" alt="wind speed">
+            <p>Wind</p>
+            <span class="wind__value">0</span>m/s
+        </div>
+        <div class="humidity">
+            <img src="img/humidity.svg" alt="humidity">
+            <p>Humidity</p>
+            <span class="humidity__value">0</span>%
+        </div>
+        <div class="search">
+            <button type="button" class="close__btn btn">
+                <i class="fa-solid fa-xmark"></i>
+                        </button>
+            <div class="search__box">
+                <button type="button" class="search__btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input type="search" placeholder="Search..." class="search__input">
+               </div>
+        </div>
+        </div>
+
+    </section>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>

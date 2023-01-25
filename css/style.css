@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+:root {
+    --dark-color: #121441;
+    --light-color: #d0d0ff;
+    --secondary-color: #157fdd;
+
+}
+
+/* px , rem , em, pt, percent */
+html {
+    font-size: 62.5%;
+    font-family: "Rubik", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    background: snow;
+    color: snow;
+    direction: ltr;
+}
+
+button,
+span,
+input[type="text"]::placeholder {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn {
+    font-family: inherit;
+    padding: 1.5rem 1.75rem;
+    border-radius: 2rem;
+    outline: 0;
+    border: none;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+.btn__primary {
+    background: #272858;
+    color: snow;
+    font-size: 1.6rem;
+}
+
+.btn__primary:hover {
+        background-color: transparent;
+    box-shadow: inset 0 0 0 0.2rem var(--secondary-color);
+    -webkit-box-shadow: inset 0 0 0 0.2rem var(--secondary-color);
+    -ms-box-shadow: inset 0 0 0 0.2rem var(--secondary-color);
+    -o-box-shadow: inset 0 0 0 0.2rem var(--secondary-color);
+}
+
+.btn__search i {
+    font-size: 1.5rem;
+}
+
+.main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    margin: 5rem auto;
+    max-width: 35rem;
+    height: 55rem;
+    background: var(--dark-color);
+    display: grid;
+    /* grid-template-rows: repeat(5, minmax(0, 1fr)); */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem 0;
+    padding: 2rem 2rem;
+    position: absolute;
+    /* left: 0; */
+    /* right: 0; */
+    /* top: 0; */
+    /* bottom: 0; */
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.searchIcon {
+    grid-column: span 2 / span 2;
+    position: relative;
+}
+
+.search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /* margin: 5rem auto; */
+    max-width: 0;
+    height: 0;
+    background: var(--secondary-color);
+    gap: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    transition: all 0.8s ease;
+    -webkit-transition: all 0.8s ease;
+    /* transform: translate(-100%, -100%); */
+    flex-direction: column;
+}
+
+.open {
+    padding: 2rem 2rem;
+    max-width: 35rem;
+    height: 55rem;
+}
+
+.search__box {
+    display: none;
+    height: 4rem;
+    gap: 1rem;
+    border-radius: 0.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    line-height: 2.5rem;
+    background: snow;
+}
+
+.search__box input {
+        background: snow;
+        outline: none;
+        border: none;
+        color: var(--dark-color);
+        font-size: 1.6rem;
+}
+
+.search__box input:placeholder {
+            color: snow!important;
+}
+
+.search__box button {
+    font-family: inherit;
+    outline: 0;
+    border: none;
+    box-shadow: none;
+    background: none;
+    color: var(--dark-color);
+    font-size: 1.5rem;
+}
+
+.close__btn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    padding: 0.75rem 1.5rem;
+}
+
+.theme {
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    background: #272858;
+    padding: 5px 10px;
+    border-radius: 2rem;
+    gap: 3px;
+}
+
+.theme__link {
+    font-family: inherit;
+    /* padding: 0.8rem 0.5rem; */
+    text-align: center;
+    font-size: 1.7rem;
+    border-radius: 50%;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    color: snow;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+}
+
+.theme__link.active {
+    background: var(--secondary-color);
+}
+
+.loaction {
+    grid-column: span 2 / span 2;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.loaction i {
+    color: var(--secondary-color);
+}
+
+.date{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+}
+
+.weatherIcon {
+    grid-column: 1 / -1;
+    display: flex;
+}
+
+.weatherIcon img {
+    width: 20rem;
+    margin: 0 auto;
+}
+
+.temperature{
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.temperature__value {
+    font-size: 7rem;
+}
+
+.temperature__scale {
+    color: var(--secondary-color);
+    font-size: 3rem;
+}
+
+.cloudiness, .wind, .humidity {
+    /* display: flex; */
+    /* flex-direction: column; */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cloudiness img, .wind img, .humidity img {
+    width: 5rem
+}
+
+
+/* light theme */
+
+.light body {
+    color: var(--dark-color);
+}
+
+.light .container {
+    background: var(--light-color);
+}
+
+.light .btn__primary, .light .theme{
+    background: #b2b2ff;
+    color: var(--dark-color);
+}
+
+.light .theme__link {
+    color: var(--dark-color);
+}
+
+.light .theme__link.active {
+    background: var(--light-color);
+}
+
+@media only screen and (max-width:415px)  {
+    .container {
+        width: 100%;
+        max-width: 45rem;
+        height: 100%;
+        gap: 7rem 0;
+        padding: 8rem 5rem;
+        border-radius: 0;
+    }
+}
